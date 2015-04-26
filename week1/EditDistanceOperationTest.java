@@ -187,6 +187,14 @@ public class EditDistanceOperationTest {
     assertEquals(2, ed.editDistance(null, "ab", 1, 1, 1, operations));
     assertEquals(2, operations.size());
     assertEquals("ab", ed.changeStringByOperations("", operations));
+
+    assertEquals(Integer.MAX_VALUE, ed.editDistance("ab", "a", Integer.MAX_VALUE,
+                 Integer.MAX_VALUE, Integer.MAX_VALUE, operations));
+    assertEquals("a", ed.changeStringByOperations("ab", operations));
+
+    assertEquals(Integer.MAX_VALUE, ed.editDistance("ab", "abc", Integer.MAX_VALUE,
+                 Integer.MAX_VALUE, Integer.MAX_VALUE, operations));
+    assertEquals("abc", ed.changeStringByOperations("ab", operations));
   }
 
   @Test

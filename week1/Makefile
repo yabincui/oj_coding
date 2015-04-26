@@ -1,4 +1,4 @@
-all : CombinationTest EditDistanceTest EditDistanceOperationTest
+all : CombinationTest EditDistanceTest EditDistanceOperationTest BestEditDistanceTest
 
 %.class : %.java
 	javac $<
@@ -11,6 +11,9 @@ EditDistanceTest : EditDistanceTest.class
 
 EditDistanceOperationTest : EditDistanceOperationTest.class
 	java org.junit.runner.JUnitCore EditDistanceOperationTest
+
+BestEditDistanceTest : BestEditDistanceTest.class
+	java org.junit.runner.JUnitCore BestEditDistanceTest
 
 clean:
 	rm -rf *.class
