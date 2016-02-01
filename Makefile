@@ -1,6 +1,6 @@
 # TODO: support writing c++ code.
 
-UnitTestList := FourSumTest
+UnitTestList := FourSumTest NextPermutationTest
 
 all: $(lastword $(UnitTestList))
 
