@@ -5,7 +5,7 @@ import java.util.*;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class FourSum {
+public class FourSumTest {
   class Node {
     int minPos;
     int value;
@@ -65,7 +65,7 @@ public class FourSum {
 
   @Test
   public void test() {
-    FourSum sum = new FourSum();
+    FourSumTest sum = new FourSumTest();
     assertTrue(sum.fourSum(new int[]{1, 2, 3, 4}, 10));
     assertTrue(sum.fourSum(new int[]{1, 1, 1, 1}, 4));
     assertFalse(sum.fourSum(new int[]{2, 3, 2, 2}, 10));

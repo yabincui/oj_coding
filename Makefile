@@ -1,19 +1,17 @@
-# TODO: support writing c++ code, and python code.
+# TODO: support writing c++ code.
 
-UnitTestList := FourSum.java
+UnitTestList := FourSumTest
 
-all: $(patsubst %.java,%.class,$(UnitTestList))
+all: $(lastword $(UnitTestList))
 
+test_all: $(UnitTestList)
 
 JUNIT_MAIN = org.junit.runner.JUnitCore
 
 %.class : %.java
 	javac $<
 
-% : %.class
-	java $(JUNIT_MAIN) $@
-
-%Test: %.class %Test.class
+%Test : %Test.class
 	java $(JUNIT_MAIN) $@
 
 %Test: %Test.py
