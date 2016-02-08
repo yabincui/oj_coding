@@ -1,5 +1,6 @@
 
-UnitTestList := LakeCounting BestCowLine SarumansArmy
+UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition FoodLink \
+                Roadblocks Conscription  Layout \
 
 LastUnitTest := $(lastword $(UnitTestList))
 
@@ -16,4 +17,4 @@ CFLAGS := -std=c++11
 	g++ $(CFLAGS) -o $@ $<
 
 clean:
-	rm -rf *_exe
+	rm -rf *_exe *_exe.dSYM
