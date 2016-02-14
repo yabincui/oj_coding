@@ -1,6 +1,5 @@
 
-UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition FoodLink \
-                Roadblocks Conscription  Layout RedAndBlack Curling2_0 MeteorShower \
+UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle
 
 LastUnitTest := $(lastword $(UnitTestList))
 
