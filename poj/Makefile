@@ -1,7 +1,8 @@
 
 UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition FoodLink \
                 Roadblocks Conscription  Layout RedAndBlack Curling2_0 MeteorShower \
-                SmallestDifference BackwardDigitSums Hopscotch
+                SmallestDifference BackwardDigitSums Hopscotch CleaningShifts \
+                RadarInstallation StallReservations
 
 LastUnitTest := $(lastword $(UnitTestList))
 
