@@ -1,5 +1,5 @@
 
-UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle
+UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle Osenbei
 
 LastUnitTest := $(lastword $(UnitTestList))
 
