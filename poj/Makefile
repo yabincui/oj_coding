@@ -2,7 +2,9 @@
 UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition FoodLink \
                 Roadblocks Conscription  Layout RedAndBlack Curling2_0 MeteorShower \
                 SmallestDifference BackwardDigitSums Hopscotch CleaningShifts \
-                RadarInstallation StallReservations
+                RadarInstallation StallReservations YogurtFactory Packets Allowance \
+                Stripies ProtectingTheFlowers CowBowling Sumsets AppleCatching \
+                MilkingTime CheapestPalindrome
 
 LastUnitTest := $(lastword $(UnitTestList))
 
