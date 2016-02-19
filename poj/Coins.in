@@ -1,0 +1,42 @@
+3 10
+1 2 4 2 1 1
+2 5
+1 4 2 1
+0 0
+
+
+1 4
+2 1
+
+
+1
+2
+4
+5
+
+cb(int c) {
+  for (int i = c; i <= V; ++i) {
+    f[i] |= f[i-c];
+  }
+}
+
+zb(int c) {
+  for (int i = V; i >= c; --i) {
+    f[i] |= f[i-c];
+  }
+}
+
+
+for (int i = 0; i < n; ++i) {
+  if (w[i] * b[i] >= V)
+     cb(w[i]);
+  else {
+    k = 1;
+    while (k < b[i]) {
+      zb(k*w[i]);
+      b[i] -= k;
+      k <<= 1;
+    }
+    zb(b[i] * w[i]);
+  }
+}
