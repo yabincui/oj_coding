@@ -5,7 +5,8 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 RadarInstallation StallReservations YogurtFactory Packets Allowance \
                 Stripies ProtectingTheFlowers CowBowling Sumsets AppleCatching \
                 MilkingTime CheapestPalindrome Coins AntCounting DollarDayz WoodenSticks \
-                BridgingSignals
+                BridgingSignals MakingTheGrade SpaceElevator CowExhibition Sunscreen \
+                MooUniversityFinancialAid
 
 LastUnitTest := $(lastword $(UnitTestList))
 
