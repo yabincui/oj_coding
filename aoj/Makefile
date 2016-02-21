@@ -1,5 +1,6 @@
 
-UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle Osenbei MarkedAncestor
+UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle Osenbei MarkedAncestor \
+                ConvenientLocation RoadConstruction
 
 LastUnitTest := $(lastword $(UnitTestList))
 
