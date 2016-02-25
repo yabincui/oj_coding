@@ -1,6 +1,7 @@
 
 UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle Osenbei MarkedAncestor \
-                ConvenientLocation RoadConstruction MrRitoPostOffice
+                ConvenientLocation RoadConstruction MrRitoPostOffice SaveYourCats \
+                GcdAndLcm
 
 LastUnitTest := $(lastword $(UnitTestList))
 
