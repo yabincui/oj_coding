@@ -7,7 +7,8 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 MilkingTime CheapestPalindrome Coins AntCounting DollarDayz WoodenSticks \
                 BridgingSignals MakingTheGrade SpaceElevator CowExhibition Sunscreen \
                 MooUniversityFinancialAid WirelessNetwork FindThemCatchThem SixDegreesOfCowvinBacon \
-                Wormholes SilverCowParty AgriNet BadCowtractors OutOfHay GcdLcmInverse
+                Wormholes SilverCowParty AgriNet BadCowtractors OutOfHay GcdLcmInverse \
+                DeadFraction
 
 LastUnitTest := $(lastword $(UnitTestList))
 
