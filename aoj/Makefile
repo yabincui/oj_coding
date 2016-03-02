@@ -1,7 +1,7 @@
 
 UnitTestList := PropertyDistribution Ball Cheese SevenPuzzle Osenbei MarkedAncestor \
                 ConvenientLocation RoadConstruction MrRitoPostOffice SaveYourCats \
-                GcdAndLcm
+                GcdAndLcm SumOf4Integers 
 
 LastUnitTest := $(lastword $(UnitTestList))
 

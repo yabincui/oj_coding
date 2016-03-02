@@ -8,7 +8,8 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 BridgingSignals MakingTheGrade SpaceElevator CowExhibition Sunscreen \
                 MooUniversityFinancialAid WirelessNetwork FindThemCatchThem SixDegreesOfCowvinBacon \
                 Wormholes SilverCowParty AgriNet BadCowtractors OutOfHay GcdLcmInverse \
-                DeadFraction
+                DeadFraction PrimePath X-factorChains SemiPrimeHNumbers PseudoprimeNumbers \
+                RaisingModuloNumbers
 
 LastUnitTest := $(lastword $(UnitTestList))
 
