@@ -9,7 +9,9 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 MooUniversityFinancialAid WirelessNetwork FindThemCatchThem SixDegreesOfCowvinBacon \
                 Wormholes SilverCowParty AgriNet BadCowtractors OutOfHay GcdLcmInverse \
                 DeadFraction PrimePath X-factorChains SemiPrimeHNumbers PseudoprimeNumbers \
-                RaisingModuloNumbers
+                RaisingModuloNumbers CableMaster AggressiveCows RiverHopscotch MonthlyExpense \
+                Drying CowAcrobats DroppingTests KBest Median Matrix TelephoneLines Garland \
+                Showstopper
 
 LastUnitTest := $(lastword $(UnitTestList))
 
