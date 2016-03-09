@@ -11,7 +11,8 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 DeadFraction PrimePath X-factorChains SemiPrimeHNumbers PseudoprimeNumbers \
                 RaisingModuloNumbers CableMaster AggressiveCows RiverHopscotch MonthlyExpense \
                 Drying CowAcrobats DroppingTests KBest Median Matrix TelephoneLines Garland \
-                Showstopper
+                Showstopper Subsequence JessicasReadingProblem BoundFound SumOfConsecutivePrimeNumbers \
+                GraveyardDesign
 
 LastUnitTest := $(lastword $(UnitTestList))
 
