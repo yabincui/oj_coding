@@ -12,7 +12,8 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 RaisingModuloNumbers CableMaster AggressiveCows RiverHopscotch MonthlyExpense \
                 Drying CowAcrobats DroppingTests KBest Median Matrix TelephoneLines Garland \
                 Showstopper Subsequence JessicasReadingProblem BoundFound SumOfConsecutivePrimeNumbers \
-                GraveyardDesign
+                GraveyardDesign FaceTheRightWay Fliptile TheWaterBowls ExtendedLightsOut \
+                PhysicsExperiment LinearWorld 4ValuesWhoseSumIs0 Subset Sumsets_2549
 
 LastUnitTest := $(lastword $(UnitTestList))
 
