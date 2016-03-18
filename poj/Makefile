@@ -13,7 +13,7 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 Drying CowAcrobats DroppingTests KBest Median Matrix TelephoneLines Garland \
                 Showstopper Subsequence JessicasReadingProblem BoundFound SumOfConsecutivePrimeNumbers \
                 GraveyardDesign FaceTheRightWay Fliptile TheWaterBowls ExtendedLightsOut \
-                PhysicsExperiment LinearWorld 4ValuesWhoseSumIs0 Subset Sumsets_2549
+                PhysicsExperiment LinearWorld 4ValuesWhoseSumIs0 Subset Sumsets_2549 Crane \
 
 LastUnitTest := $(lastword $(UnitTestList))
 
