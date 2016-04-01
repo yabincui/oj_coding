@@ -14,7 +14,7 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 Showstopper Subsequence JessicasReadingProblem BoundFound SumOfConsecutivePrimeNumbers \
                 GraveyardDesign FaceTheRightWay Fliptile TheWaterBowls ExtendedLightsOut \
                 PhysicsExperiment LinearWorld 4ValuesWhoseSumIs0 Subset Sumsets_2549 Crane \
-                ASimpleProblemWithIntegers MooFest
+                ASimpleProblemWithIntegers MooFest InnerVertices
 
 LastUnitTest := $(lastword $(UnitTestList))
 
