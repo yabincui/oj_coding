@@ -9,7 +9,8 @@ UnitTestList := BestTimeToBuyAndSellStockIVTest WildcardMatchingTest \
                 MaximumGapTest CompareVersionNumbers.class FractionToRecurringDecimal.class \
                 ExcelSheetColumnTitle.class MajorityElement.class ExcelSheetColumnNumber.class \
                 FactorialTrailingZeroes.class BSTIterator.class DungeonGame.class \
-                CreateMaximumNumber.class
+                CreateMaximumNumber.class RangeSumQueryMutable.class \
+                CountOfSmallerNumbersAfterSelf.class \
 
 all: $(lastword ,$(UnitTestList))
 
