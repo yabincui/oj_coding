@@ -16,6 +16,7 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
                 PhysicsExperiment LinearWorld 4ValuesWhoseSumIs0 Subset Sumsets_2549 Crane \
                 ASimpleProblemWithIntegers MooFest InnerVertices Matrix_2155 WhoGetsTheMostCandies \
 								K-thNumber BalancedLineup FrequentValues Walls Intervals TravelingByStagecoach \
+								ArrangeTheBulls CornFields RectangularCovering DNALaboratory PaidRoads
 
 LastUnitTest := $(lastword $(UnitTestList))
 
