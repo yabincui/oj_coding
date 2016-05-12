@@ -18,7 +18,7 @@ UnitTestList := LakeCounting BestCowLine SarumansArmy FenceRepair Expedition Foo
 								K-thNumber BalancedLineup FrequentValues Walls Intervals TravelingByStagecoach \
 								ArrangeTheBulls CornFields RectangularCovering DNALaboratory PaidRoads Blocks \
 								MatrixPowerSeries QuadTiling TrainingLittleCats MinimizingMaximizer CleaningShifts_3171 \
-								TransferringSylla
+								TransferringSylla Firing MinimumCut HardLife
 
 LastUnitTest := $(lastword $(UnitTestList))
 
