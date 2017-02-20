@@ -5,7 +5,8 @@ class Solution {
     unordered_map<int64_t, int> dp;
 
 public:
-    int numberOfArithmeticSlices(vector<int>& A) {
+    // O(N^3)
+    int numberOfArithmeticSlices1(vector<int>& A) {
         place_map.clear();
         for (int i = 0; i < A.size(); ++i) {
             place_map[A[i]].push_back(i);
@@ -39,6 +40,26 @@ public:
             }
         }
         dp[key] = res;
+        return res;
+    }
+    
+    int numberOfArithmeticSlices(vector<int>& A) {
+        dp.clear();
+        int res = 0;
+        for (int i = 0; i < A.size(); ++i) {
+            for (int j = 0; j < i; ++j) {
+                int64_t diff = (int64_t)A[i] - A[j];
+                if (abs(diff) > INT_MAX) {
+                    continue;
+                }
+                int64_t prev_key = ((int64_t)j << 32) | (uint32_t)diff;
+                auto it = dp.find(prev_key);
+                int prev_count = it != dp.end() ? it->second : 0;
+                res += prev_count;
+                int64_t cur_key = ((int64_t)i << 32) | (uint32_t)diff;
+                dp[cur_key] += prev_count + 1;
+            }
+        }
         return res;
     }
 };

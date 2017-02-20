@@ -1,4 +1,6 @@
 // 295. Find Median from Data Stream
+/*
+// Use Binary search tree to store a sorted list.
 class MedianFinder {
 private:
     struct Node {
@@ -48,7 +50,6 @@ private:
     Node* root;
     
 public:
-    /** initialize your data structure here. */
     MedianFinder() {
         root = NULL;    
     }
@@ -79,6 +80,42 @@ public:
         }
     }
 };
+*/
+
+// Use two priority queue to store the medians of the list.
+class MedianFinder {
+private:
+    priority_queue<int, vector<int>> small_q;
+    priority_queue<int, vector<int>, greater<int>> big_q;
+    
+public:
+    MedianFinder() {
+    }
+    
+    void addNum(int num) {
+        if (small_q.empty() || small_q.top() >= num) {
+            small_q.push(num);
+        } else {
+            big_q.push(num);
+        }
+        if (small_q.size() < big_q.size()) {
+            small_q.push(big_q.top());
+            big_q.pop();
+        } else if (small_q.size() > big_q.size() + 1) {
+            big_q.push(small_q.top());
+            small_q.pop();
+        }
+    }
+    
+    double findMedian() {
+        int size = small_q.size() + big_q.size();
+        if (size % 2 == 0) {
+            return ((double)small_q.top() + big_q.top()) / 2;
+        }
+        return small_q.top();
+    }
+};
+
 
 /**
  * Your MedianFinder object will be instantiated and called as such:
