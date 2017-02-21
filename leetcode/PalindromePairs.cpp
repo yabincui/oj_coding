@@ -76,8 +76,50 @@ private:
         return true;
     }
     
+    void search(unordered_map<string, vector<int>>& map, string s, int pos, unordered_set<uint64_t>& hit_set) {
+        reverse(s.begin(), s.end());
+        auto it = map.find(s);
+        if (it != map.end()) {
+            for (auto n : it->second) {
+                if (n == pos) continue;
+                uint64_t key = ((uint64_t)pos << 32) | n;
+                hit_set.insert(key);
+            }
+        }
+    }
+    
 public:
     vector<vector<int>> palindromePairs(vector<string>& words) {
+       unordered_map<string, vector<int>> hit_map;
+       unordered_map<string, vector<int>> complete_hit_map;
+       for (int i = 0; i < words.size(); ++i) {
+           for (int omit_size = 0; omit_size <= words[i].size(); ++omit_size) {
+               if (isPalindrome(words[i], 0, omit_size - 1)) {
+                   hit_map[words[i].substr(omit_size)].push_back(i);
+               }
+               complete_hit_map[words[i]].push_back(i);
+           }
+       }
+       vector<vector<int>> res;
+       unordered_set<uint64_t> hit_set;
+       for (int i = 0; i < words.size(); ++i) {
+           for (int omit_size = 1; omit_size <= words[i].size(); ++omit_size) {
+               if (isPalindrome(words[i], words[i].size() - omit_size, words[i].size() - 1)) {
+                   search(complete_hit_map, words[i].substr(0, words[i].size() - omit_size), i, hit_set);
+               }
+           }
+           search(hit_map, words[i], i, hit_set);
+       }
+       for (uint64_t key : hit_set) {
+           int p1 = key >> 32;
+           int p2 = key & 0xffffffff;
+           res.push_back({p1, p2});
+       }
+       return res;
+    }
+
+
+    vector<vector<int>> palindromePairs1(vector<string>& words) {
        Node* root = NULL;
        Node* completeRoot = NULL;
        for (int i = 0; i < words.size(); ++i) {
