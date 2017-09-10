@@ -43,7 +43,6 @@ public:
                 states.push_back(state);
             }
         }
-        
         if (m >= 4) {
             return states.size();
         }
@@ -81,18 +80,3 @@ public:
         return res;
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
