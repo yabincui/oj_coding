@@ -22,7 +22,7 @@ public:
     
     void findLongest(int sum[][26], int start, int end) {
         //printf("find start = %d, end = %d\n", start, end);
-        if (end - start + 1 <= max_len || end - start < 2) {
+        if (end - start + 1 <= max_len) {
             return;
         }
         int cut = getCutChar(sum, start, end);

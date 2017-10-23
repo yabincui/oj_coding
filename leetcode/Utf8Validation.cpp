@@ -6,7 +6,7 @@ public:
         int* p = data.data();
         while (n > 0) {
             int used;
-            printf("n = %d\n", n);
+            //printf("n = %d\n", n);
             if (!getUtf8(p, n, &used)) {
                 return false;
             }
@@ -35,7 +35,7 @@ public:
             follow_count--;
         }
         //printf("follow_count = %d, n = %d\n", follow_count, n);
-        if (follow_count > 4) {
+        if (follow_count >= 4) {
             return false;
         }
         if (n < follow_count + 1) {
