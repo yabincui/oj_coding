@@ -18,3 +18,17 @@ hidden integer overflow: 1838, 2208
 wrong parameter to upper_bound: 2055
 high limit is too low in binary search: 2178
 not consider reverse case in graph: 3458
+
+# Week02
+
+binary search
+array: sort, acc_sum
+stack, map
+dp: string concatenation, num sum
+sliding window: sort, unordered_map
+tree traversal
+
+errors:
+return value requirement: 1954
+edge case for dp: 2745, 3685
+edge case: 2745, 3362
